@@ -1,0 +1,67 @@
+<div id="page">
+<!-- start sidebar -->
+  <div id="sidebar">
+		
+				<? $this->load->view('pages/side_bar.php'); ?>
+			
+	</div>
+	<!-- end sidebar -->
+    <div id="content">
+        <div class="post">
+            <div class="title">
+
+                <br/><small><a href="http://localhost/ci_traffic/index.php/view_report">View Reports</a> | <a href="http://localhost/ci_traffic/index.php/report">Report</a> | <a href="http://localhost/ci_traffic/">Live Traffic</a></small><br/><br/>
+            </div>
+            <div class="entry">
+                
+                    <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+ <div id="register" class="animate form"> 
+
+                    <!-- Form Code Start -->
+                    <?php echo validation_errors(); ?>
+                   <?php echo form_open('page/reset_password') ?>
+                        <fieldset >
+                            <legend>Reset Password</legend>
+
+                            <input type='hidden' name='submitted' id='submitted' value='1'/>
+                            <!-- start page -->
+
+
+                            <div class='short_explanation'>* required fields</div>
+
+                            <div><?php
+                                    if (isset($_SESSION['error'])) {
+                                      echo'<span class="error">' . $_SESSION['error'] . '</span>';
+                                        unset($_SESSION['error']);
+                                        }
+?></div>
+                         
+                                <label for='username' ><b>Your Email*:</b></label><br/>
+                                <input type='text' name='email' id='email'  maxlength="50" /><br/>
+                                <span id='resetreq_email_errorloc' class='error'></span>
+                            
+                            <div class='short_explanation'>A link to reset your password will be sent to the email address</div>
+                            <div class='container'>
+                                <input type='submit' name='Submit' value='Submit' />
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div> </div>    </div>    </div>    </div> </div>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+    // <![CDATA[
+
+    var frmvalidator = new Validator("resetreq");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+
+    frmvalidator.addValidation("email", "req", "Please provide the email address used to sign-up");
+    frmvalidator.addValidation("email", "email", "Please provide the email address used to sign-up");
+
+    // ]]>
+</script>
+
