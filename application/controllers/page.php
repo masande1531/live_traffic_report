@@ -25,7 +25,7 @@ class Page extends CI_Controller {
             'smtp_host' => 'mail.gmims.co.za',
             'smtp_port' => 25,
             'smtp_user' => 'admin@gmims.co.za',
-            'smtp_pass' => 'minda2011',
+            'smtp_pass' => '*******',
              'mailtype' => 'html',
             'charset' => 'utf-8',
             'wordwrap' => TRUE
